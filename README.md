@@ -3,6 +3,12 @@
 This repository documents everything I am learning during my Web Development Internship Training at Techies Gateway.  
 It includes structured notes, hands-on practice, assignments, and mini-projects completed throughout the internship.
 
+## 🌐 Live Demo
+
+You can view the live GitHub Pages site for this repository here:  
+
+👉 https://itz-xd.github.io/web-dev-internship-techies-gateway/
+
 ## 📌 What This Repository Contains
 - Core web development concepts
 - Daily practice code
