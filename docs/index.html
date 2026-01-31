@@ -2,40 +2,183 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>My WebDev Projects</title>
+    <title>Web Development Projects</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
       body {
-        font-family: system-ui, sans-serif;
+        background: #1e1e2e;
+        color: #cdd6f4;
+        font-family: "Courier New", Courier, monospace;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 960px;
+        background: #313244;
+        border: 1px solid #45475a;
         padding: 40px;
       }
+
+      /* ===== LOGO ===== */
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 24px;
+      }
+
+      .logo-img {
+        height: 42px;
+        width: auto;
+        object-fit: contain;
+        border-radius: 50%;
+        box-shadow: #1e1e2e 2px 2px 10px 2px;
+      }
+
+      .logo-emoji {
+        font-size: 18px;
+        line-height: 1;
+      }
+
       h1 {
-        margin-bottom: 20px;
+        font-size: clamp(22px, 4vw, 36px);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 12px;
       }
+
+      .subtitle {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #a6adc8;
+        margin-bottom: 36px;
+        max-width: 720px;
+      }
+
       ul {
-        line-height: 2;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
       }
+
+      li {
+        border: 1px dashed #45475a;
+        padding: 18px 20px;
+      }
+
       a {
         text-decoration: none;
-        color: blueviolet;
-        font-weight: 500;
+        color: inherit;
+        display: block;
+      }
+
+      .project-title {
+        font-weight: bold;
+        font-size: clamp(15px, 2.5vw, 18px);
+        margin-bottom: 6px;
+        color: #89b4fa;
+      }
+
+      .project-desc {
+        font-size: 13px;
+        line-height: 1.5;
+        color: #bac2de;
+      }
+
+      footer {
+        margin-top: 48px;
+        font-size: 12px;
+        color: #a6adc8;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      /* ===== FULL HEIGHT ON PORTRAIT DEVICES (FIXED) ===== */
+      @media (orientation: portrait) {
+        body {
+          place-items: start center;
+          padding: 0; /* 🔥 critical fix: prevents scrollbar */
+        }
+
+        .container {
+          min-height: 100svh;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding: 24px;
+        }
+
+        footer {
+          margin-top: 24px;
+        }
       }
     </style>
   </head>
+
   <body>
-    <h1>🚀 My Web Development Projects</h1>
+    <main class="container">
+      <header>
+        <!-- LOGO -->
+        <div class="logo">
+          <img src="./assets/logo.png" alt="itz-XD logo" class="logo-img" />
+          <span class="logo-emoji">🌼🦚💙✨</span>
+        </div>
 
-    <ul>
-      <li>
-        <a href="./First-Design/">Project 00 – First Design</a>
-      </li>
+        <h1>Web Development Projects</h1>
+        <p class="subtitle">
+          A curated collection of hands-on projects focused on layout systems,
+          responsiveness, and clean front-end architecture. Built with
+          discipline, version control, and scalable structure.
+        </p>
+      </header>
 
-      <!-- future projects -->
-      <!--
-      <li>
-        <a href="./project01/">Project 01 – Coming Soon</a>
-      </li>
-      -->
-    </ul>
+      <section>
+        <ul>
+          <li>
+            <a href="./First-Design/">
+              <div class="project-title">
+                Project 00 — Complex Flexbox Layout
+              </div>
+              <div class="project-desc">
+                Desktop-first layout with semantic HTML, Flexbox composition,
+                and full mobile & tablet responsiveness.
+              </div>
+            </a>
+          </li>
+
+          <!-- Future projects -->
+          <!--
+          <li>
+            <a href="./project01/">
+              <div class="project-title">
+                Project 01 — Responsive Landing Page
+              </div>
+              <div class="project-desc">
+                Scalable layout with fluid typography and accessibility-first design.
+              </div>
+            </a>
+          </li>
+          -->
+        </ul>
+      </section>
+
+      <footer>
+        <span>© itz-XD</span>
+        <span>HTML · CSS · Git · GitHub Pages</span>
+      </footer>
+    </main>
   </body>
 </html>
