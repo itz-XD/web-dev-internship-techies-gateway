@@ -48,12 +48,23 @@
 
       #left {
         width: 60%;
-        min-height: 100%;
+        display: flex;
+        gap: 15px;
+      }
+
+      /* ================= LEFT ARTICLES ================= */
+      .article {
+        flex: 1;
+        background-color: skyblue;
+        padding: 20px;
+      }
+
+      .article h2 {
+        margin-bottom: 15px;
       }
 
       #right {
         width: 40%;
-        min-height: 100%;
       }
     </style>
   </head>
@@ -65,7 +76,30 @@
       </nav>
 
       <section id="home">
-        <div id="left"></div>
+        <div id="left">
+          <div class="article">
+            <h2>First article</h2>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus
+              omnis magnam facilis dolore dolorum! Soluta accusamus magni
+              expedita quos veniam delectus natus nihil ex tempore, labore qui,
+              nemo aliquam ipsum beatae quae laboriosam eius provident
+              repellendus.
+            </p>
+          </div>
+
+          <div class="article">
+            <h2>Second article</h2>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus
+              omnis magnam facilis dolore dolorum! Soluta accusamus magni
+              expedita quos veniam delectus natus nihil ex tempore, labore qui,
+              nemo aliquam ipsum beatae quae laboriosam eius provident
+              repellendus.
+            </p>
+          </div>
+        </div>
+
         <div id="right"></div>
       </section>
     </main>
