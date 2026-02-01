@@ -108,3 +108,66 @@ body {
   font-weight: 700;
   color: #fff;
 }
+
+/* =====  RESPONSIVENESS  ===== */
+@media (max-width: 768px) {
+  #main {
+    padding: 20px;
+    height: auto;
+  }
+
+  #main-cont {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #left,
+  #right {
+    width: 100%;
+    height: auto;
+  }
+
+  .left-box1 {
+    aspect-ratio: 1 / 1;
+    height: auto;
+  }
+
+  #right {
+    gap: 16px;
+  }
+
+  .right-top-sect {
+    height: auto;
+  }
+
+  .right-bottom-sect {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  .rb-left,
+  .rb-right {
+    width: 47%;
+  }
+
+  .right-box3 {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+  }
+
+  .rb-right {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .right-box4a,
+  .right-box4b {
+    aspect-ratio: 3 / 1.33;
+  }
+
+  .right-box2 {
+    aspect-ratio: 16 / 9;
+  }
+}
